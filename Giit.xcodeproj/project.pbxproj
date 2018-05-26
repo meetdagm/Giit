@@ -13,9 +13,14 @@
 		610FC33220B94AEC009E1A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 610FC33020B94AEC009E1A64 /* Main.storyboard */; };
 		610FC33420B94AED009E1A64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 610FC33320B94AED009E1A64 /* Assets.xcassets */; };
 		610FC33720B94AED009E1A64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 610FC33520B94AED009E1A64 /* LaunchScreen.storyboard */; };
+		610FC34220B94ECA009E1A64 /* GitHubAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FC34120B94ECA009E1A64 /* GitHubAPIManager.swift */; };
+		610FC34420B963C0009E1A64 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FC34320B963C0009E1A64 /* Gist.swift */; };
+		610FC34820B97161009E1A64 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610FC34720B97161009E1A64 /* AlamofireExtension.swift */; };
+		B41C16BE1940F41476C6899C /* Pods_Giit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AA7347D44024EEB6DBC8A4 /* Pods_Giit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2D129A83868092F0B2BEEB /* Pods-Giit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giit/Pods-Giit.release.xcconfig"; sourceTree = "<group>"; };
 		610FC32720B94AEC009E1A64 /* Giit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		610FC32A20B94AEC009E1A64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		610FC32C20B94AEC009E1A64 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		610FC33320B94AED009E1A64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		610FC33620B94AED009E1A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		610FC33820B94AED009E1A64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		610FC34120B94ECA009E1A64 /* GitHubAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIManager.swift; sourceTree = "<group>"; };
+		610FC34320B963C0009E1A64 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		610FC34720B97161009E1A64 /* AlamofireExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		A8AA7347D44024EEB6DBC8A4 /* Pods_Giit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F654D9B42DC7A33A8D48C570 /* Pods-Giit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giit/Pods-Giit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41C16BE1940F41476C6899C /* Pods_Giit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				610FC32920B94AEC009E1A64 /* Giit */,
 				610FC32820B94AEC009E1A64 /* Products */,
+				F1824F30E681D25F9BD842AA /* Pods */,
+				D295FB171D67E71AA89AE59C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,59 @@
 		610FC32920B94AEC009E1A64 /* Giit */ = {
 			isa = PBXGroup;
 			children = (
-				610FC32A20B94AEC009E1A64 /* AppDelegate.swift */,
-				610FC32C20B94AEC009E1A64 /* MasterViewController.swift */,
-				610FC32E20B94AEC009E1A64 /* DetailViewController.swift */,
+				610FC33F20B94EA3009E1A64 /* Model */,
+				610FC34020B94EA9009E1A64 /* View */,
+				610FC33E20B94E8C009E1A64 /* Controller */,
 				610FC33020B94AEC009E1A64 /* Main.storyboard */,
 				610FC33320B94AED009E1A64 /* Assets.xcassets */,
 				610FC33520B94AED009E1A64 /* LaunchScreen.storyboard */,
 				610FC33820B94AED009E1A64 /* Info.plist */,
+				610FC34720B97161009E1A64 /* AlamofireExtension.swift */,
 			);
 			path = Giit;
+			sourceTree = "<group>";
+		};
+		610FC33E20B94E8C009E1A64 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				610FC32A20B94AEC009E1A64 /* AppDelegate.swift */,
+				610FC32E20B94AEC009E1A64 /* DetailViewController.swift */,
+				610FC32C20B94AEC009E1A64 /* MasterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		610FC33F20B94EA3009E1A64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				610FC34120B94ECA009E1A64 /* GitHubAPIManager.swift */,
+				610FC34320B963C0009E1A64 /* Gist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		610FC34020B94EA9009E1A64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D295FB171D67E71AA89AE59C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8AA7347D44024EEB6DBC8A4 /* Pods_Giit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1824F30E681D25F9BD842AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F654D9B42DC7A33A8D48C570 /* Pods-Giit.debug.xcconfig */,
+				5F2D129A83868092F0B2BEEB /* Pods-Giit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 610FC33B20B94AED009E1A64 /* Build configuration list for PBXNativeTarget "Giit" */;
 			buildPhases = (
+				B97F5E71BB03FB12FAB9BA1A /* [CP] Check Pods Manifest.lock */,
 				610FC32320B94AEC009E1A64 /* Sources */,
 				610FC32420B94AEC009E1A64 /* Frameworks */,
 				610FC32520B94AEC009E1A64 /* Resources */,
+				09B56131EC7462F41A390EC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +192,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09B56131EC7462F41A390EC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Giit/Pods-Giit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Giit/Pods-Giit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B97F5E71BB03FB12FAB9BA1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Giit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		610FC32320B94AEC009E1A64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				610FC34420B963C0009E1A64 /* Gist.swift in Sources */,
 				610FC32F20B94AEC009E1A64 /* DetailViewController.swift in Sources */,
+				610FC34820B97161009E1A64 /* AlamofireExtension.swift in Sources */,
+				610FC34220B94ECA009E1A64 /* GitHubAPIManager.swift in Sources */,
 				610FC32D20B94AEC009E1A64 /* MasterViewController.swift in Sources */,
 				610FC32B20B94AEC009E1A64 /* AppDelegate.swift in Sources */,
 			);
@@ -282,6 +385,7 @@
 		};
 		610FC33C20B94AED009E1A64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F654D9B42DC7A33A8D48C570 /* Pods-Giit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +404,7 @@
 		};
 		610FC33D20B94AED009E1A64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2D129A83868092F0B2BEEB /* Pods-Giit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
